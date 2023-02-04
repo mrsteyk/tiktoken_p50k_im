@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiktoken_p50k_im"
+version = "1.0.0"
+authors = [
+  { name="mrsteyk" },
+]
+description = "p50k_im encoding for tiktoken"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mrsteyk/tiktoken_p50k_im"
+"Bug Tracker" = "https://github.com/mrsteyk/tiktoken_p50k_im/issues"
