@@ -1,16 +1,16 @@
 from tiktoken.load import load_tiktoken_bpe
 
 ENDOFTEXT = "<|endoftext|>"
-IM_PREFIX = "<|im_start|>"
-IM_MIDDLE = "<|im_sep|>"
-IM_SUFFIX = "<|im_end|>"
+IM_START = "<|im_start|>"
+IM_SEP = "<|im_sep|>"
+IM_END = "<|im_end|>"
 IM_NEWLINES = "\n\n"
 
 def p50k_im():
     mergeable_ranks = load_tiktoken_bpe(
         "https://openaipublic.blob.core.windows.net/encodings/p50k_base.tiktoken"
     )
-    special_tokens = {ENDOFTEXT: 50256, IM_PREFIX: 50281, IM_MIDDLE: 50282, IM_SUFFIX: 50283}
+    special_tokens = {ENDOFTEXT: 50256, IM_START: 50281, IM_END: 50282, IM_SEP: 50283}
     mergeable_ranks[IM_NEWLINES.encode()] = 50284
     return {
         "name": "p50k_im",
